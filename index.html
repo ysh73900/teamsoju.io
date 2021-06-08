@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOJU | Main</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="./css/teammain.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="curtain">
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul class="menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./html/teamhistory.html">History</a></li>
+      <li><a href="./html/teamabout.html">About</a></li>
+      <li><a href="./html/teamfood.html">Food</a></li>
+    </ul>
+  </div>
+
+  <div class="toggle" onclick="toggle()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div id="container">
+    <div class="logo">
+      <h1>SO<span>JU</span></h1>
+    </div>
+    <section>
+      <div class="content">
+        <div class="textBx animate__animated animate__rotateInDownLeft">
+          <h2>SOJU</h2>
+          <p>소주는 곡류를 발효시켜 증류하거나, 에탄올을 물로 희석하여 만든 술<br>
+            소주라는 말은 태워서 만든 술이라는 뜻</p>
+
+        </div>
+
+        <div class="imgBx animate__animated animate__rotateInDownRight">
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/참이슬 프레쉬.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/참이슬 오리지널.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/진로 오리지널2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/진로 골드.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/처음처럼.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/대선소주.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/teammain.js"></script>
+</body>
+
+</html>

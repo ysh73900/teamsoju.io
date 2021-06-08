@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOJU | Food</title>
+  <link rel="stylesheet" href="../css/teamfood.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="curtain">
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="teamhistory.html">History</a></li>
+      <li><a href="teamabout.html">About</a></li>
+      <li><a href="teamfood.html">Food</a></li>
+    </ul>
+
+  </div>
+
+  <div class="toggle" onclick="toggle()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+
+  <div id="container">
+    <div class="logo">
+      <h1>SO<span>JU</span></h1>
+    </div>
+
+
+    <section>
+      <div class="content">
+        <div class="bannerText" id="slideshowText">
+          <div class="active">
+            <h2 class="koText">삼겹살</h2>
+            <h2 class="engText">recommendation 1ST</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur repellendus, temporibus non
+              qui labore itaque deserunt expedita amet cumque animi dicta voluptate delectus quia doloribus
+              accusantium
+              quod veniam vel?</p>
+          </div>
+
+          <div>
+            <h2 class="koText">곱창</h2>
+            <h2 class="engText">recommendation 2nd</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur repellendus,
+              temporibus non
+              qui labore itaque deserunt expedita amet cumque animi dicta voluptate delectus quia doloribus
+              accusantium
+              quod veniam vel?</p>
+          </div>
+
+          <div>
+            <h2 class="koText">골뱅이무침</h2>
+            <h2 class="engText">recommendation 3rd</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur repellendus,
+              temporibus non
+              qui labore itaque deserunt expedita amet cumque animi dicta voluptate delectus quia doloribus
+              accusantium
+              quod veniam vel?</p>
+          </div>
+
+          <div>
+            <h2 class="koText">닭발</h2>
+            <h2 class="engText">recommendation 4th</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur repellendus,
+              temporibus non
+              qui labore itaque deserunt expedita amet cumque animi dicta voluptate delectus quia doloribus
+              accusantium
+              quod veniam vel?</p>
+          </div>
+
+          <div>
+            <h2 class="koText">족발</h2>
+            <h2 class="engText">recommendation 5th</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur repellendus,
+              temporibus non
+              qui labore itaque deserunt expedita amet cumque animi dicta voluptate delectus quia doloribus
+              accusantium
+              quod veniam vel?</p>
+          </div>
+        </div>
+        <div class="bannerImg" id="slideshow">
+          <img src="../img/삼겹살.jpg" class="active">
+          <img src="../img/곱창.jpg">
+          <img src="../img/골뱅이무침.jpg">
+          <img src="../img/닭발.jpg">
+          <img src="../img/족발.png">
+        </div>
+      </div>
+
+      <div class="icons">
+        <ul class="sci">
+
+        </ul>
+        <ul class="controls">
+          <li><a><i class="far fa-caret-square-left" onclick="prevSlide();prevSlideText();"></i></a></li>
+          <li><a><i class="far fa-caret-square-right" onclick="nextSlide();nextSlideText();"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="../js/teammain.js"></script>
+
+  <script>
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+
+    function nextSlide() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    };
+
+    function prevSlide() {
+      slides[index].classList.remove('active');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    };
+
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+
+    function nextSlideText() {
+      slidesText[i].classList.remove('active');
+      i = (i + 1) % slidesText.length;
+      slidesText[i].classList.add('active');
+    };
+
+    function prevSlideText() {
+      slidesText[i].classList.remove('active');
+      i = (i - 1 + slidesText.length) % slidesText.length;
+      slidesText[i].classList.add('active');
+    };
+  </script>
+</body>
+
+</html>
